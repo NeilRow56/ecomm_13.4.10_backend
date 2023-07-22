@@ -28,7 +28,9 @@ import { useOrigin } from "@/hooks/use-origin"
 
 
 const formSchema = z.object({
-  name: z.string().min(2),
+  name: z.string().min(2 , {
+    message: "Name must be at least 2 characters.",
+  }),
 });
 
 type SettingsFormValues = z.infer<typeof formSchema>
