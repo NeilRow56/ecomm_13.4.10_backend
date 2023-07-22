@@ -22,8 +22,7 @@ import {
 } from "@/components/ui/form"
 import { Separator } from "@/components/ui/separator"
 import { Heading } from "@/components/ui/heading"
-
-
+import { AlertModal } from "@/components/modals/alert-modal"
 
 
 const formSchema = z.object({
@@ -81,7 +80,12 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
 
   return (
     <>
-    
+    <AlertModal 
+      isOpen={open} 
+      onClose={() => setOpen(false)}
+      onConfirm={onDelete}
+      loading={loading}
+    />
      <div className="flex items-center justify-between">
         <Heading title="Store settings" description="Manage store preferences" />
         <Button
@@ -117,7 +121,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
         </form>
       </Form>
       <Separator />
-     
+      
     </>
   );
 };
