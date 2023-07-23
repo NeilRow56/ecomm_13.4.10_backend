@@ -9,7 +9,7 @@ import { Heading } from "@/components/ui/heading"
 import { Separator } from "@/components/ui/separator"
 import { DataTable } from "@/components/ui/data-table"
 
-import { BillboardColumn, columns } from "./column"
+import { BillboardColumn, columns } from "./columns"
 
 interface BillboardClientProps {
     data: BillboardColumn[]
