@@ -22,6 +22,8 @@ const CategoriesPage = async ({
     }
   });
 
+ 
+
   const formattedCategories: CategoryColumn[] = categories.map((item) => ({
     id: item.id,
     name: item.name,
